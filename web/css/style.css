@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/02/2025, 12:15:47 PM
+    Author     : HillenbrandS
+*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+/* Hyperlink styles */
+a {
+    color: #1e90ff; /* Dodger blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #104e8b; /* Darker blue */
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+h1 {
+    color: #1e90ff; /* Dodger blue */
+    text-align: center;
+}
+
+/* Centering the hyperlinks */
+.link-container {
+    text-align: center;
+}
+
+
+
