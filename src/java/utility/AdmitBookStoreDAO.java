@@ -36,7 +36,7 @@ public class AdmitBookStoreDAO {
      * @return a list of all books in the database
      * @throws SQLException if a database access error occurs
      */
-    public List<Book> getAllBooks() throws SQLException {
+    public List getAllBooks() throws SQLException {
         
         Statement statement = con.createStatement();
         ResultSet rs = null;
