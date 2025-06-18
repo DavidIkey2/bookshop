@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app version="2.5" 
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-     <servlet>
-	<servlet-name>main</servlet-name>
-	<servlet-class>controller.FrontController</servlet-class>
-  </servlet>
 
-  <servlet-mapping>
-	<servlet-name>main</servlet-name>
+    <servlet>
+        <servlet-name>main</servlet-name>
+        <servlet-class>controller.FrontController</servlet-class>
+
+        <!-- Init params for action-command mapping -->
+        <init-param>
+            <param-name>add_to_cart</param-name>
+            <param-value>dispatchers.AddToCartAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>checkout</param-name>
+            <param-value>dispatchers.CheckoutAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>continue</param-name>
+            <param-value>dispatchers.ContinueShoppingAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>update_cart</param-name>
+            <param-value>dispatchers.UpdateCartAction</param-value>
+        </init-param>
+        <init-param>
+            <param-name>view_cart</param-name>
+            <param-value>dispatchers.ViewCartAction</param-value>
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>main</servlet-name>
         <url-pattern>/books</url-pattern>
-  </servlet-mapping>
+    </servlet-mapping>
 
-    </web-app>
+</web-app>
